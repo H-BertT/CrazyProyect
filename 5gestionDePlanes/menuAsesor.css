@@ -1,0 +1,6 @@
+.contenedorInternoSuperior{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }

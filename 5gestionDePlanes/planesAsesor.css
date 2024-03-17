@@ -14,11 +14,41 @@
   }
 
   .contenedorInternoSuperior{
-    /* border: 2px solid; */
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
   }
+
+  .contenedorTabla{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .campo {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 400px;
+    min-width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+  select {
+    width: 410px;
+    min-width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* Agregar cualquier otro estilo que desees para el elemento select */
+}
+
+
 
   .botones {
     width: auto;
@@ -29,7 +59,7 @@
     justify-content: space-around;
   }
   
-  
+
   .botonesInferiores {
     width: auto;
     max-width: 600px; /* Define el ancho máximo del recuadro */
@@ -37,9 +67,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
   }
-  
-  
+    
   .boton {
     width: auto;
     min-width: 200px;
@@ -78,7 +108,26 @@
     background-color: #ccc;
     color: #000;
   }
+  
 
   @media only screen and (max-width: 600px) {
-  }
-  
+    }
+
+    /* --------------------------------------------- TABLA ------------------------------------------------- */
+table {
+    width: auto;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    width: auto;
+    height: 20px;
+    min-width: 200px;
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    text-align: center;
+    background-color: #ffffffc8;
+}
