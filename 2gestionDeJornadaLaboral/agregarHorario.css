@@ -1,0 +1,138 @@
+.contenedor  {
+    margin-top: 20px;
+    padding: 20px 30px 30px 20px;
+    /* border: 2px solid red; */
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 12px;
+    background-color: rgba(196, 185, 185, 0.313);
+  }
+
+  .contenedorInternoSuperior{
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+  }
+
+  .contenedorInternoMedio{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .contenedorTabla{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .campo {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 150px;
+    min-width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+  select {
+    width: 150px;
+    min-width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* Agregar cualquier otro estilo que desees para el elemento select */
+}
+
+
+
+  .botones {
+    width: auto;
+    max-width: 600px; /* Define el ancho máximo del recuadro */
+    margin: 0 auto; /* Centra el recuadro en la pantalla */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flexbox a columnas */
+    justify-content: space-around;
+  }
+  
+
+  .botonesInferiores {
+    width: auto;
+    max-width: 600px; /* Define el ancho máximo del recuadro */
+    margin: 0 auto; /* Centra el recuadro en la pantalla */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+    
+  .boton {
+    width: auto;
+    min-width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .boton:hover {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+  .botonSalir {
+    width: 100px;
+    height: 27px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .botonSalir:hover {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+
+  @media only screen and (max-width: 600px) {
+    }
+
+    /* --------------------------------------------- TABLA ------------------------------------------------- */
+table {
+    width: auto;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    height: 20px; 
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    text-align: center;
+    background-color: #ffffffc8;
+}

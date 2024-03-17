@@ -1,0 +1,131 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; /* Reducir el tamaño de fuente predeterminado */
+}
+
+.calendarioContenedor {
+  width: auto;
+  height: auto; /* Establece la altura automática */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: auto; /* Ajusta el ancho del calendario según tus necesidades */
+  max-width: 700px; /* Reducir el ancho máximo */
+  background: #121111e7;
+  border-radius: 8px;
+  height: auto; /* Establece la altura automática */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); */
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px 10px;
+  justify-content: space-between;
+}
+
+.calendar {
+  padding: 15px;
+  max-height: 300px; /* Reducir la altura máxima */
+  overflow-y: auto; /* Añade scroll si el calendario es muy largo */
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 32px;
+  width: 32px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  line-height: 32px;
+  font-size: 1.5rem; /* Reducir el tamaño de ícono */
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -8px; /* Ajustar el margen derecho del último ícono */
+}
+
+header .icons span:hover {
+  background: #fbfbfb;
+}
+
+header .current-date {
+  font-size: 1.25rem; /* Reducir el tamaño de fuente de la fecha actual */
+  font-weight: 500;
+  color: #fff;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 15px; /* Reducir el margen inferior */
+}
+
+.calendar li {
+  color: #ffffff;
+  width: calc(100% / 7);
+  font-size: 0.9rem; /* Reducir el tamaño de fuente de los días */
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px; /* Reducir el margen superior */
+}
+
+.days li.inactive {
+  color: #fdfdfd;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 32px; /* Reducir el tamaño del círculo */
+  width: 32px; /* Reducir el tamaño del círculo */
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #74cd215f;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+
+
+/* https://codingnepalweb.com/demos/dynamic-calendar-javascript/ */
