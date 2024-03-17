@@ -41,14 +41,14 @@
   }
   
   input {
-    width: 150px;
+    width: 200px;
     min-width: auto;
     padding: 5px;
     border: 1px solid #ccc;
   }
 
   select {
-    width: 150px;
+    width: 200px;
     min-width: auto;
     padding: 5px;
     border: 1px solid #ccc;

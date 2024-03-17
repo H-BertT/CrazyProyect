@@ -1,4 +1,4 @@
-.contenedor  {
+.contenedorG {
     margin-top: 20px;
     padding: 20px 30px 30px 20px;
     /* border: 2px solid red; */
@@ -14,13 +14,6 @@
   }
 
   .contenedorInternoSuperior{
-    display: flex;
-    margin-bottom: 20px;
-    flex-direction: row;
-    gap: 170px;
-  }
-
-  .contenedorInternoMedio{
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -41,19 +34,21 @@
   }
   
   input {
-    width: 150px;
+    width: 400px;
     min-width: auto;
     padding: 5px;
     border: 1px solid #ccc;
   }
 
   select {
-    width: 150px;
+    width: 410px;
     min-width: auto;
     padding: 5px;
     border: 1px solid #ccc;
     /* Agregar cualquier otro estilo que desees para el elemento select */
 }
+
+
 
   .botones {
     width: auto;
@@ -125,8 +120,9 @@ table {
 }
 th, td {
     text-align: center;
-    height: 20px; 
-    min-width: 80px;
+    width: auto;
+    height: 20px;
+    min-width: 200px;
     border: 2px solid black;
     padding: 8px;
     text-align: left;
