@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de Ticket</title>
+  <link rel="stylesheet" href="gestionDeEmpleados.css">
+  <link rel="stylesheet" href="generarTicket.css">
+  <link rel="stylesheet" href="../fondo.css">
+  <title>Administrar Tickets</title>
+</head>
+</head>
+<body>
+
+  <div class="contenedor">
+    <form id="formulario-ticket">
+      <label for="tipo-servicio" class="label-texto">Tipo de Servicio:</label>
+      <select id="tipo-servicio" name="tipo-servicio" class="input-generico">
+        <option value="servicio1">Servicio 1</option>
+        <option value="servicio2">Servicio 2</option>
+        <option value="servicio3">Servicio 3</option>
+      </select>
+      <br>
+      <label for="monto-servicio" class="label-texto">Monto de Servicio:</label>
+      <input type="text" id="monto-servicio" name="monto-servicio" class="input-generico">
+      <br>
+      <label for="descuento" class="label-texto">Descuento:</label>
+      <input type="text" id="descuento" name="descuento" class="input-generico">
+      <br>
+      <label for="monto-efectivo" class="label-texto">Monto de Pago en Efectivo:</label>
+      <input type="text" id="monto-efectivo" name="monto-efectivo" class="input-generico">
+      <br>
+      <button type="button" onclick="agregarDatos()" class="input-generico">Agregar Datos</button>
+      <button type="button" onclick="limpiarDatos()" class="input-generico">Limpiar Datos</button>
+    </form>
+
+    <div id="ticket" style="background: whitesmoke; border: 1px solid black;"></div>
+
+    <button type="button" onclick="volver()">Volver</button>
+    <button type="button" onclick="guardar()">Guardar</button>
+
+    <script>
+      function agregarDatos() {
+        // Obtener los valores del formulario
+        var tipoServicio = document.getElementById('tipo-servicio').value;
+        var montoServicio = document.getElementById('monto-servicio').value;
+        var descuento = document.getElementById('descuento').value;
+        var montoEfectivo = document.getElementById('monto-efectivo').value;
+
+        // Crear el ticket
+        var ticketHTML = '<h3>Ticket</h3>';
+        ticketHTML += '<p>Tipo de Servicio: ' + tipoServicio + '</p>';
+        ticketHTML += '<p>Monto de Servicio: ' + montoServicio + '</p>';
+        ticketHTML += '<p>Descuento: ' + descuento + '</p>';
+        ticketHTML += '<p>Monto de Pago en Efectivo: ' + montoEfectivo + '</p>';
+
+        // Mostrar el ticket en la página
+        document.getElementById('ticket').innerHTML = ticketHTML;
+      }
+
+      function limpiarDatos() {
+        // Limpiar los campos del formulario y el ticket
+        document.getElementById('formulario-ticket').reset();
+        document.getElementById('ticket').innerHTML = '';
+      }
+
+      function volver() {
+        // Redireccionar o hacer alguna acción para volver
+        alert('Implementa la funcionalidad de volver');
+      }
+
+      function guardar() {
+        // Realizar alguna acción para guardar los datos (puedes enviarlos a un servidor, etc.)
+        alert('Implementa la funcionalidad de guardar');
+      }
+    </script>
+  </div>
+
+</body>
+</html>

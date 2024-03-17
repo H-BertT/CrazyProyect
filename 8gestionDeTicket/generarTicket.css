@@ -1,0 +1,14 @@
+
+
+.label-texto {
+  width: 240px;
+  display: inline-block;
+
+  margin: 3px;
+}
+
+.input-generico{
+  width: 200px;
+
+  margin: 3px;
+}
