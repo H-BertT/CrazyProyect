@@ -15,6 +15,7 @@
 
   .contenedorInternoSuperior{
     display: flex;
+    margin-bottom: 20px;
     flex-direction: row;
     gap: 170px;
   }
