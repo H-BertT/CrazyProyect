@@ -1,18 +1,27 @@
-
-
-.label-texto {
-  width: 240px;
-  display: inline-block;
-
-  margin: 3px;
-}
-
-.input-generico{
-  width: 200px;
-
-  margin: 3px;
-}
-
 hr{
   width: 80%;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 400px;
+  min-width: auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 410px;
+  min-width: auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+  /* Agregar cualquier otro estilo que desees para el elemento select */
 }

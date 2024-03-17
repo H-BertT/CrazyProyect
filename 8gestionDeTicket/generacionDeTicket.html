@@ -4,121 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestion de Ticket</title>
-  <link rel="stylesheet" href="gestionDeEmpleados.css">
   <link rel="stylesheet" href="generarTicket.css">
   <link rel="stylesheet" href="../fondo.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script src="generacionDeTicket.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+
 </head>
 </head>
 <body>
 
-  <div class="contenedor">
-    <form id="formulario-ticket">
-      <label for="tipo-servicio" class="label-texto">Tipo de Servicio:</label>
-      <select id="tipo-servicio" name="tipo-servicio" class="input-generico">
-        <option value="servicio1">Servicio 1</option>
-        <option value="servicio2">Servicio 2</option>
-        <option value="servicio3">Servicio 3</option>
-      </select>
-      <br>
-      <label for="monto-servicio" class="label-texto">Monto de Servicio:</label>
-      <input type="text" id="monto-servicio" name="monto-servicio" class="input-generico">
-      <br>
-      <label for="descuento" class="label-texto">Descuento:</label>
-      <input type="text" id="descuento" name="descuento" class="input-generico">
-      <br>
-      <label for="monto-efectivo" class="label-texto">Monto de Pago en Efectivo:</label>
-      <input type="text" id="monto-efectivo" name="monto-efectivo" class="input-generico">
-      <br>
-      <div style="display:flex; flex-direction: row; align-items: flex-start; width: 90%; margin: auto;">
-        <button type="button" onclick="agregarDatos()" class="input-generico">Agregar Datos</button>
-        <button type="button" onclick="limpiarDatos()" class="input-generico">Limpiar Datos</button>
-      </div>
-    </form>
+  <div class="contenedorG">
+    <div class="contenedorInternoSuperior">
+      <form id="formulario-ticket">
+        
+        <div class="campo">
+          <label for="tipo-servicio" class="label-texto">Tipo de Servicio:</label>
+          <select id="tipo-servicio" name="tipo-servicio" class="input-generico">
+            <option value="servicio1">Servicio 1</option>
+            <option value="servicio2">Servicio 2</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="monto-servicio" class="label-texto">Monto de Servicio:</label>
+          <input type="text" id="monto-servicio" name="monto-servicio" class="input-generico">
+        </div>
+        <div class="campo">
+          <label for="descuento" class="label-texto">Descuento:</label>
+          <input type="text" id="descuento" name="descuento" class="input-generico">
+        </div>
+        <campo>
+          <label for="monto-efectivo" class="label-texto">Monto de Pago en Efectivo:</label>
+          <input type="text" id="monto-efectivo" name="monto-efectivo" class="input-generico">
+        </campo>
+      
+        <div style="display:flex; flex-direction: row; align-items: flex-start; width: 90%; margin: auto;">
+          <div class="botonesInferiores">
+            <button class="boton" type="button" onclick="agregarDatos()" class="input-generico">Agregar Datos</button>
+            <button class="boton" type="button" onclick="limpiarDatos()" class="input-generico">Limpiar Datos</button>
+          </div>
+        </div>
+      </form>
+      <div id="ticket" style="background: whitesmoke; border: 1px solid black; border-radius: 12px;"></div>
+      
+    </div>
+    <div class="botonesInferiores">
+      <button class="botonSalir" type="button" onclick="volver()">Volver</button>
+      <button class="botonSalir" type="button" onclick="generarPDF()">Generar PDF</button>
+    </div>
 
-    <div id="ticket" style="background: whitesmoke; border: 1px solid black;"></div>
-
-    <button type="button" onclick="volver()">Volver</button>
-    <button type="button" onclick="generarPDF()">Generar PDF</button>
-
-    <script>
-      function agregarDatos() {
-            // Obtener los valores del formulario
-        var tipoServicio = document.getElementById('tipo-servicio').value;
-        var montoServicio = document.getElementById('monto-servicio').value;
-        var descuento = document.getElementById('descuento').value;
-        var montoEfectivo = document.getElementById('monto-efectivo').value;
-        var fecha = new Date().toLocaleDateString();
-        var hora = new Date().toLocaleTimeString();
-
-            // Crear el ticket
-        var ticketHTML = '<h3>Ticket</h3>';
-        ticketHTML += '<p>Titulo: Eme nutrucion</p>';
-        ticketHTML += '<p>Direccion: Chilapa Alvarez calle 4 norte #### No. Colonia del dulce nombre</p>';
-        ticketHTML += '<hr>';
-        ticketHTML += '<p>Atendido por: <input type="text"></p>';
-        ticketHTML += '<p>A la fecha de: ' + fecha + '</p>';
-        ticketHTML += '<p>A la hora de: ' + hora + '</p>';
-        ticketHTML += '<hr>';
-        ticketHTML += '<div style="display: flex; justify-content: space-between;">';
-        ticketHTML += '<div>';
-        ticketHTML += '<p>Descripcion:</p>';
-        ticketHTML += '<ul>';
-        ticketHTML += '<li>Tipo de servicio: ' + tipoServicio + '</li>';
-        ticketHTML += '<li>Monto del servicio: ' + montoServicio + '</li>';
-        ticketHTML += '<li>Descuento del servicio: ' + descuento + '</li>';
-        ticketHTML += '</ul>';
-        ticketHTML += '</div>';
-        ticketHTML += '<div>';
-        ticketHTML += '<p>Precio:</p>';
-        ticketHTML += '<ul>';
-            // Calcular precio
-        var precio = parseFloat(montoServicio) - parseFloat(descuento);
-        ticketHTML += '<li>' + precio.toFixed(2) + '</li>';
-        ticketHTML += '</ul>';
-        ticketHTML += '</div>';
-        ticketHTML += '</div>';
-        ticketHTML += '<hr>';
-        ticketHTML += '<p>Total: ' + precio.toFixed(2) + '</p>';
-        ticketHTML += '<p>Pago en efectivo: ' + montoEfectivo + '</p>';
-        ticketHTML += '<p>Cambio: ' + (parseFloat(montoEfectivo) - precio).toFixed(2) + '</p>';
-        ticketHTML += '<p>¡Gracias!</p>';
-
-            // Mostrar el ticket en la página
-        document.getElementById('ticket').innerHTML = ticketHTML;
-      }
-
-      function limpiarDatos() {
-            // Limpiar los campos del formulario y el ticket
-        document.getElementById('formulario-ticket').reset();
-        document.getElementById('ticket').innerHTML = '';
-      }
-
-      function volver() {
-            // Redireccionar o hacer alguna acción para volver
-        alert('Implementa la funcionalidad de volver');
-      }
-
-      function guardar() {
-            // Realizar alguna acción para guardar los datos (puedes enviarlos a un servidor, etc.)
-        alert('Implementa la funcionalidad de guardar');
-      }
-
-     function generarPDF() {
-    // Crear un nuevo objeto jsPDF
-        var doc = new jsPDF();
-
-    // Obtener el contenido HTML del ticket
-        var ticketHTML = document.getElementById('ticket').innerHTML;
-
-    // Agregar el contenido HTML al PDF
-        doc.fromHTML(ticketHTML, 15, 15);
-
-    // Guardar el PDF
-        doc.save('ticket.pdf');
-      }
-
-    </script>
   </div>
 
 </body>
