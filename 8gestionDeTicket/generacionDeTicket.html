@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="gestionDeEmpleados.css">
   <link rel="stylesheet" href="generarTicket.css">
   <link rel="stylesheet" href="../fondo.css">
-  <title>Administrar Tickets</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 </head>
 </head>
 <body>
@@ -39,7 +39,7 @@
     <div id="ticket" style="background: whitesmoke; border: 1px solid black;"></div>
 
     <button type="button" onclick="volver()">Volver</button>
-    <button type="button" onclick="guardar()">Guardar</button>
+    <button type="button" onclick="generarPDF()">Generar PDF</button>
 
     <script>
       function agregarDatos() {
@@ -103,6 +103,21 @@
             // Realizar alguna acción para guardar los datos (puedes enviarlos a un servidor, etc.)
         alert('Implementa la funcionalidad de guardar');
       }
+
+     function generarPDF() {
+    // Crear un nuevo objeto jsPDF
+        var doc = new jsPDF();
+
+    // Obtener el contenido HTML del ticket
+        var ticketHTML = document.getElementById('ticket').innerHTML;
+
+    // Agregar el contenido HTML al PDF
+        doc.fromHTML(ticketHTML, 15, 15);
+
+    // Guardar el PDF
+        doc.save('ticket.pdf');
+      }
+
     </script>
   </div>
 
