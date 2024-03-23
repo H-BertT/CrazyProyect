@@ -8,6 +8,17 @@ body {
     align-items: center;
 }
 
+.contenedorHorizontal{
+  width: 100%;
+  max-width: 600px; /* Define el ancho máximo del recuadro */
+  margin: 0 auto; /* Centra el recuadro en la pantalla */
+  display: flex;
+  flex-direction: row; /* Alinea los elementos en una fila horizontal */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten al ancho máximo */
+  justify-content: space-around; /* Distribuye los elementos uniformemente */
+}
+
+
 .contenedorG {
   margin-top: 20px;
   padding: 20px 30px 30px 20px;
@@ -69,6 +80,7 @@ body {
   }
 
   .boton {
+    min-width: 200px;
     width: auto;
     height: 50px;
     margin: 10px;
