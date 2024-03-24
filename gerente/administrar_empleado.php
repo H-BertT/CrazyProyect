@@ -1,55 +1,52 @@
+<?php
+// Verificar si la cookie "usuario" está establecida
+if(!isset($_COOKIE['usuario'])) {
+    header("Location: ../index.html");
+    exit(); // Es buena práctica detener la ejecución del script después de enviar una redirección
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="marcarAsistencia.css">
+    <link rel="stylesheet" href="gestionDeEmpleados.css">
     <link rel="stylesheet" href="../fondo.css">
-    <title>Registro de asistencia</title>
+    <title>Administrar Empleados</title>
 </head>
 
 <body>
     <div class="contenedorG">
         <div class="texto">
-            <H1>Toma de asistencia</H1>
+            <H1>Agregar un nuevo empleado</H1>
           </div>
-
-
           <div class="contenedorInternoSuperior">
             <div>
                 <form action="#">
                     <div class="campo">
-                        <label for="nombre">No. Empleado:</label>
-                        <select id="numEmpleado" name="numEmpleado">
-                            <option value="entrada">1</option>
-                            <option value="salida">2</option>
-                            <option value="salida">3</option>
-                            <option value="salida">4</option>
-                            <option value="salida">5</option>
-                        </select>
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="campo">
-                        <label for="registro">Registro mi:</label>
-                        <select id="registro" name="registro">
-                            <option value="entrada">Entrada</option>
-                            <option value="salida">Salida</option>
-                        </select>
+                      <label for="apellido-paterno">Apellido Paterno:</label>
+                      <input type="text" id="apellido-paterno" name="apellido-paterno" required>
                     </div>
                     <div class="campo">
-                      <label for="fecha">Fecha:</label>
-                      <input type="date" id="fecha">
+                      <label for="apellido-materno">Apellido Materno:</label>
+                      <input type="text" id="apellido-materno" name="apellido-materno" required>
                     </div>
                     <div class="campo">
-                      <label for="hora">Hora:</label>
-                      <input type="time" id="hora">
+                      <label for="puesto-empleado">Puesto de empleado:</label>
+                      <input type="text" id="puesto-empleado" name="puesto-empleado" required>
                     </div>
-                </form>
+                  </form>
             </div>
               
             <div class="botones">
-                <button class="boton">Marcar asistencia</button>
-                <button class="boton">Ir a modificar asistencia</button>
-                <button class="boton">Ir a eliminar asistencia</button>
+                <button class="boton">Agregar nuevo empleado</button>
+                <button class="boton">Modifica un empleado</button>
+                <button class="boton">Eliminar a un empleado</button>
             </div>        
           </div>
 
@@ -57,12 +54,11 @@
             <table>
               <thead>
                 <tr>
-                  <th>No. de registro</th>
-                  <th>Empleado</th>
+                  <th>No. de empleado</th>
+                  <th>Nombre(s)</th>
+                  <th>Apellido P</th>
+                  <th>Apellido M</th>
                   <th>Puesto</th>
-                  <th>Entrada/Salida</th>
-                  <th>Hora</th>
-                  <th>Fecha</th>
                 </tr>
               </thead>
               <tbody>
@@ -70,18 +66,16 @@
                 <tr>
                   <td>1</td>
                   <td>Hilber</td>
+                  <td>Reyes</td>
+                  <td>Tecolapa</td>
                   <td>Gerente</td>
-                  <td>Entrada</td>
-                  <td>09:15</td>
-                  <td>2024-03-17</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Hilber</td>
-                  <td>Gerente</td>
-                  <td>Salida</td>
-                  <td>18:00</td>
-                  <td>2024-03-17</td>
+                  <td>Juan</td>
+                  <td>Cruz</td>
+                  <td>Cardenas</td>
+                  <td>Maestro del s</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -89,7 +83,6 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                   </tr>
                 <tr>
                     <td></td>
@@ -97,10 +90,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                   </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

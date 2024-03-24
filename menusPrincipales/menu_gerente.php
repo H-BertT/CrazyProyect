@@ -1,4 +1,3 @@
-
 <?php
 // Verificar si la cookie "usuario" está establecida
 if(!isset($_COOKIE['usuario'])) {

@@ -1,3 +1,11 @@
+<?php
+// Verificar si la cookie "usuario" está establecida
+if(!isset($_COOKIE['usuario'])) {
+    header("Location: ../index.html");
+    exit(); // Es buena práctica detener la ejecución del script después de enviar una redirección
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="planesAsesor.css">
     <link rel="stylesheet" href="../fondo.css">
-    <title>Planes nutriologo</title>
+    <title>Agregar servicio</title>
 </head>
 
 <body>
     <div class="contenedorG">
         <div class="texto">
-            <H1>Planes de nutriologo</H1>
+            <H1>Planes de asesor deportivo</H1>
           </div>
 
 
@@ -37,7 +45,7 @@
                         </select>
                     </div>
                     <div class="campo">
-                        <label for="nombre">Plan nutricional:</label>
+                        <label for="nombre">Plan activo:</label>
                         <select id="planActivo" name="planActivo">
                             <option value="entrada">Faltante</option>
                             <option value="salida">Agregado</option>
@@ -54,9 +62,9 @@
             </div>
               
             <div class="botones">
-              <button class="boton">Agregar planes</button>
-              <button class="boton">Modificar planes</button>
-              <button class="boton">Eliminar planes</button>
+                <button class="boton">Agregar planes</button>
+                <button class="boton">Modificar planes</button>
+                <button class="boton">Eliminar planes</button>
             </div>        
           </div>
 

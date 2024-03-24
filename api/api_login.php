@@ -25,16 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Redireccionar según el puesto del empleado
             switch ($puesto_empleado) {
                 case "Gerente":
-                header("Location: ../menusPrincipales/gerenteMenu.php");
+                header("Location: ../menusPrincipales/menu_gerente.php");
                 exit();
                 case "Nutriologo":
-                header("Location: ../menusPrincipales/menuNutriologo.html");
+                header("Location: ../menusPrincipales/menu_nutriologo.php");
                 exit();
                 case "Asesor Dep":
-                header("Location: ../menusPrincipales/menuAsesorDeportivo.html");
+                header("Location: ../menusPrincipales/menu_asesor_deportivo.php");
                 exit();
                 case "Recepcionista":
-                header("Location: ../menusPrincipales/menuRecepcion.html");
+                header("Location: ../menusPrincipales/menu_recepcion.php");
                 exit();
                 default:
                 echo "Puesto de empleado no reconocido.";

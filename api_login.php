@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($resultado->num_rows > 0) {
             // Usuario y contraseña coinciden
             echo "Inicio de sesión exitoso.";
-            header("Location: 1gestionEmpleados/gerenteMenu.html");
+            header("Location: menusPrincipales/menu_gerente.php");
             exit(); 
         } else {
             // Usuario o contraseña incorrectos
