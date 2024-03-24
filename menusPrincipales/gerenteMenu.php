@@ -1,3 +1,12 @@
+
+<?php
+// Verificar si la cookie "usuario" está establecida
+if(!isset($_COOKIE['usuario'])) {
+    header("Location: ../index.html");
+    exit(); // Es buena práctica detener la ejecución del script después de enviar una redirección
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,23 +21,27 @@
     <div class="contenedorGerente">
         <div class="texto">
             <H1>Gerente</H1>
-          </div>
+        </div>
 
         <div class="contenedorHorizontal">
           <div class="botones">
-            <button class="boton">Horarios</button>
+            <a href="../menusCRUDE/menuCrudeHorario.html"><button class="boton">Horarios</button></a>
             <button class="boton">Asistencia</button>
-          </div>
-          <div class="botones">
+        </div>
+        <div class="botones">
             <button class="boton">Pagos</button>
             <button class="boton">Empleados</button>
-          </div>
         </div>
-        <div class="botonesInferiores">
-           <button class="botonSalir">Regresar</button>
-           <button class="botonSalir">Salir</button>
-        </div>
+    </div>
+    <div class="botonesInferiores">
+     <button class="botonSalir">Regresar</button>
+     <button class="botonSalir">Salir</button>
+ </div>
 
-      </div>
+</div>
 </body>
+
+<footer>
+    
+</footer>
 </html>
