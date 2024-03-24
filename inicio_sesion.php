@@ -1,11 +1,3 @@
-<?php
-// Verificar si la cookie "usuario" está establecida
-if(!isset($_COOKIE['usuario'])) {
-    header("Location: ../index.html");
-    exit(); // Es buena práctica detener la ejecución del script después de enviar una redirección
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

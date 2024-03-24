@@ -15,18 +15,26 @@
       </div>
         <div class="contenedorHorizontal">
           <div class="botones">
-            <a href="inicio_sesion.php"><button class="boton" >Gerente</button></a>
-            <button class="boton">Recepción</button>
+            <a href="inicio_sesion.php"><button class="boton">Gerente</button></a>
+            <a href="inicio_sesion.php"><button class="boton">Recepción</button></a>
           </div>
           <div class="botones">
-            <button class="boton">Nutriólogo</button>
-            <button class="boton">Asesor deportivo</button>
+            <a href="inicio_sesion.php"><button class="boton">Nutriólogo</button></a>
+            <a href="inicio_sesion.php"><button class="boton">Asesor deportivo</button></a>
           </div>
         </div>
         <div class="botones">
-           <button class="botonSalir">Salir</button>
+           <button class="botonSalir" onclick="cerrarPestana()">Salir</button>
         </div>
       </div>
+
+
+      <script>
+        function cerrarPestana() {
+          // Cerrar la pestaña actual
+          window.close();
+        }
+        </script>
       
 
 </body>
