@@ -58,8 +58,7 @@ if(!isset($_COOKIE['usuario'])) {
       
     </div>
     <div class="botonesInferiores">
-      <button class="botonSalir" type="button" onclick="volver()">Volver</button>
-      <button class="botonSalir" type="button" onclick="generarPDF()">Generar PDF</button>
+      <a href="../menusPrincipales/menu_recepcion.php"><button class="botonSalir">Regresar</button></a>
     </div>
 
   </div>

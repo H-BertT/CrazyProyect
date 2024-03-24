@@ -21,14 +21,14 @@ if(!isset($_COOKIE['usuario'])) {
             <H1>Asesor deportivo</H1>
         </div>
           <div class="contenedorInternoSuperior">
-                <button class="botonG">Planes del cliente</button>
+          <a href="../menusCRUDE/menu_crude_planes_asesor.php"><button class="boton">Planes cliente</button></a>
           </div>
-          <div class="botones">
+          <!-- <div class="botones">
                 <button class="botonesLargos">Hoja de recomendaciones</button>
-          </div>
+          </div> -->
           <div class="botonesInferiores">
-                <button class="botonSalir">Regresar</button>
-                <button class="botonSalir">Salir</button>
+             <a href="inicio_sesion.php"><button class="botonSalir">Regresar</button></a>
+             <a href="index.html"><button class="botonSalir">Salir</button></a>
           </div>
 
       </div>

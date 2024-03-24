@@ -24,6 +24,7 @@
                 <label for="password">Contraseña</label>
             </div>
             <button type="submit" name="iniciar_sesion">Iniciar</button>
+            <a href="index.html"><button class="boton">Regresar</button></a>
         </form>
     </section>
 </body>

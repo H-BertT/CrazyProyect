@@ -24,21 +24,21 @@ if(!isset($_COOKIE['usuario'])) {
 
           <div class="contenedorInternoSuperior">
                 <div class="botones">
-                      <button class="boton">Agenda</button>
-                      <button class="boton">Cliente</button>
-                </div>
-                <div class="botones">
-                      <button class="boton">Servicios</button>
-                      <button class="boton">Pago de cita</button>
-                </div>
-          </div>
-          <div class="botones">
-                <button class="botonesLargos"> Empleados</button>
-                <button class="botonesLargos">Planes y Recomendaciones</button>
+                      <a href="../recepcion/agenda_de_fichas_de_cita.php"><button class="boton">Agenda</button></a>
+                      <a href="../menusCRUDE/menu_crude_cliente.php"><button class="boton">Cliente</button></a>
+                  </div>
+                  <div class="botones">
+                      <a href="../menusCRUDE/menu_crude_servicios.php"><button class="boton">Servicios</button></a>
+                      <a href="../8gestionDeTicket/generacion_de_ticket.php"><button class="boton">Pago de cita</button></a>
+                  </div>
+            </div>
+            <div class="botones">
+                  <a href="../menusCRUDE/menu_crude_asis_hora.php"><button class="boton">Empleados</button></a>
+                  <a href="../5gestionDePlanes/planes_vista_recepcion.php"><button class="boton">Planes y Recomendaciones</button></a>
           </div>
           <div class="botonesInferiores">
-                <button class="botonSalir">Regresar</button>
-                <button class="botonSalir">Salir</button>
+                  <a href="inicio_sesion.php"><button class="botonSalir">Regresar</button></a>
+                  <a href="index.html"><button class="botonSalir">Salir</button></a>
           </div>
 
       </div>

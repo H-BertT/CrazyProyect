@@ -22,13 +22,12 @@ if(!isset($_COOKIE['usuario'])) {
           </div>
 
         <div class="botonesCrude">
-          <button class="botonCrude">Agregar nuevo empleado</button>
-          <button class="botonCrude">Modifica un empleado</button>
-          <button class="botonCrude">Eliminar a un empleado</button>
+        <a href="../gerente/administrar_empleado.php"><button class="botonCrude">Agregar nuevo empleado</button></a>
+        <a href="../gerente/administrar_empleado.php"><button class="botonCrude">Modifica un empleado</button></a>
+        <a href="../gerente/administrar_empleado.php"><button class="botonCrude">Eliminar un empleado</button></a>
         </div>
         <div class="botonesInferiores">
-           <button class="botonSalir">Regresar</button>
-           <button class="botonSalir">Salir</button>
+        <a href="../menusPrincipales/menu_gerente.php"><button class="botonSalir">Regresar</button></a>
         </div>
 
       </div>

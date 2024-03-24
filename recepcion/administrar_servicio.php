@@ -87,8 +87,8 @@ if(!isset($_COOKIE['usuario'])) {
           </div>
 
         <div class="botonesInferiores">
-           <button class="botonSalir">Regresar</button>
-           <button class="botonSalir">Salir</button>
+        <a href="../menusCRUDE/menu_crude_servicios.php"><button class="botonSalir">Regresar</button></a>
+          <a href="../menusPrincipales/menu_recepcion.php"><button class="botonSalir">Salir</button></a>
         </div>
 
       </div>

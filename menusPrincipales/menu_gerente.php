@@ -24,17 +24,17 @@ if(!isset($_COOKIE['usuario'])) {
 
         <div class="contenedorHorizontal">
           <div class="botones">
-            <a href="../menusCRUDE/menuCrudeHorario.html"><button class="boton">Horarios</button></a>
-            <button class="boton">Asistencia</button>
+            <a href="../menusCRUDE/menu_crude_horario.php"><button class="boton">Horarios</button></a>
+            <a href="../menusCRUDE/menu_crude_asistencia.php"><button class="boton">Asistencia</button></a>
         </div>
         <div class="botones">
-            <button class="boton">Pagos</button>
-            <button class="boton">Empleados</button>
+            <a href="../gerente/pago_empleados.php"><button class="boton">Pagos</button></a>
+            <a href="../menusCRUDE/menu_crude_empleados.php"><button class="boton">Empleados</button></a>
         </div>
     </div>
     <div class="botonesInferiores">
-     <button class="botonSalir">Regresar</button>
-     <button class="botonSalir">Salir</button>
+     <a href="inicio_sesion.php"><button class="botonSalir">Regresar</button></a>
+     <a href="index.html"><button class="botonSalir">Salir</button></a>
  </div>
 
 </div>

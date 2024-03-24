@@ -23,14 +23,13 @@ if(!isset($_COOKIE['usuario'])) {
           </div>
 
         <div class="botonesCrude">
-          <button class="botonCrude">Crear conjunto de planes</button>
-          <button class="botonCrude">Modificar conjunto de planes</button>
-          <button class="botonCrude">Eliminar conjunto de planes</button>
+        <a href="../5gestionDePlanes/administrar_planes_nutri.php"><button class="botonCrude">Crear conjunto de planes</button></a>
+        <a href="../5gestionDePlanes/administrar_planes_nutri.php"><button class="botonCrude">Modificar conjunto de planes</button></a>
+        <a href="../5gestionDePlanes/administrar_planes_nutri.php"><button class="botonCrude">Eliminar conjunto de planes</button></a>
         </div>
 
         <div class="botonesInferiores">
-           <button class="botonSalir">Regresar</button>
-           <button class="botonSalir">Salir</button>
+        <a href="../menusPrincipales/menu_nutriologo.php"><button class="botonSalir">Regresar</button></a>
         </div>
       </div>
 </body>
